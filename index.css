@@ -3,3 +3,36 @@ body
     background-color: black;
     color: white;
 }
+
+.blockpage
+{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.accueil
+{
+    text-align: center;
+    background-color: chocolate;
+}
+
+.presentation
+{
+
+    background-color: darkviolet;
+}
+
+.skill 
+{
+     background-color: cornflowerblue;
+}
+
+.project
+{
+    background-color: green;
+}
+
+.contact
+{
+  background-color: darkred;
+}
