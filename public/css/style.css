@@ -7,19 +7,20 @@ body
 .menu
 {
     
-    font-size: 36px;
+    font-size: 30px;
     font-family: 'Cormorant Garamond', serif;
     line-height: 44px ;
     text-align: center;
     display: flex;
     justify-content: space-around;
     list-style-type: none ;
+    margin-top: 30px;
 
 }
 .accueil
 {
-    margin-top: 17%;
-    margin-bottom: 20%;
+    margin-top: 150px;
+    margin-bottom: 15%;
     display: block;
     line-height: 57px;
 }
@@ -41,3 +42,67 @@ body
    
     
 }
+
+.presentation 
+{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Cormorant-Garamond';
+    font-size: 25px;
+    margin-bottom: 300px;    
+
+}
+.aboutme
+{
+    margin-left: 50px;
+    margin-right: 150px;
+    line-height: 35px;
+}
+
+.nom
+{
+    font-size: 36px;
+
+}
+
+.pdp
+{
+    display: block;
+    height: 345;
+    width: 342;
+    border-radius: 100%;
+    margin-right: 200px;
+}
+
+.softskill
+{
+    margin-top: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Cormorant Garamond';
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: 1 1 solid burlywood;
+}
+
+.hardskill
+{
+    margin-top: 100px;
+    margin-bottom: 500px;
+    font-size: 30px;
+    list-style-type: none;
+    font-family: 'EB Garamond';
+    
+
+}
+li
+{
+    line-height: 5;
+}
+
+
+
+
