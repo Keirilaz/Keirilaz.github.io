@@ -1,0 +1,43 @@
+body 
+{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.menu
+{
+    
+    font-size: 36px;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 44px ;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none ;
+
+}
+.accueil
+{
+    margin-top: 17%;
+    margin-bottom: 20%;
+    display: block;
+    line-height: 57px;
+}
+.welcome 
+{
+    font-size: 48px;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 57px;
+    text-align: center;
+    padding-bottom: 57px;
+
+}
+.portfolio
+{
+    
+    font-size: 96px;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center; 
+   
+    
+}
