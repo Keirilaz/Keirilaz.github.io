@@ -1,7 +1,12 @@
 body 
 {
     background-color: #141414;
-    color: whitesmoke;
+    color: white;
+    text-shadow: 1px 1px 2px #401010;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
 .blockpage
 {
@@ -20,10 +25,77 @@ body
     justify-content: space-around;
     list-style-type: none ;
     margin-top: 5px;
-    margin-bottom: 0;
+    margin-bottom: 20;
     
 
 }
+.childmenu
+{
+    display: inline;
+}
+.childmenu:hover
+{
+    color: white;
+}
+.childmenu::after
+{
+    content: "";
+    display: block;
+    position:absolute;
+    height: 1.5px;
+    width: 10%;
+    background-color: #cccccc;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+.childmenu:hover::after
+{
+    transform: scale(1);
+}
+.childmenu1
+{
+    display: inline;
+}
+
+.childmenu1::after
+{
+    content: "";
+    display: block;
+    position:absolute;
+    height: 1.5px;
+    width: 5%;
+    background-color: #cccccc;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+.childmenu1:hover::after
+{
+    transform: scale(1);
+    background-color: white;
+}
+
+.childmenu2
+{
+    display: inline;
+}
+
+.childmenu2::after
+{
+    content: "";
+    display: block;
+    position:absolute;
+    height: 1.5px;
+    width: 7%;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+.childmenu2:hover::after
+{
+    transform: scale(1);
+    background-color: white;
+}
+
 .accueil
 {
     margin-top: 150px;
@@ -59,6 +131,7 @@ body
     font-family: 'Cormorant-Garamond';
     font-size: 25px;
     margin-bottom: 300px;    
+    background-color: blueviolet;
 
 }
 .aboutme
@@ -94,7 +167,7 @@ h2
 .skill{
     width: 900px;
     margin: 60px auto;
-    color: #fff;
+    color:white;
     padding: 20px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
     background-color: #1a1918
@@ -207,6 +280,59 @@ h2
 
     
 }
+/*------------------Projet-----------------*/
+.projet{
+    display: flex;
+    min-width: 600px;
+    max-width: 900px;
+    height: 353px;
+    margin: 4em auto;
+    overflow: hidden;
+}
+
+
+.image{
+    min-width: 60px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.05,0.61,0.41,0.95);
+    overflow: hidden;
+    position: relative;
+}
+.image.active{
+    flex-grow: 100;
+    max-width: 500px;
+    margin: 0px;
+    border-radius: 7px;
+    background-size: auto 100%;
+}
+.image:not(.active){
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+.textcontainer{
+    width: 100%;
+    height: 400px;
+    visibility: hidden;
+    transform: translateY(300px);
+    opacity: 0;
+    transition: all .4s ease ;
+    background: linear-gradient(354deg, black 0%, transparent 72%);
+    color: white;
+    overflow: hidden;
+
+}
+.text{
+    position: absolute;
+    bottom: 5rem;
+    padding: 15px;
+}
+.active .textcontainer{
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+}
 /* -------------------contact----------------- */
 
 .contact
@@ -217,6 +343,7 @@ h2
     margin-left: 100px;
     margin-right: 100px;
 }
+
 
 
 
