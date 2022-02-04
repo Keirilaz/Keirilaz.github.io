@@ -1,5 +1,9 @@
 *{
     color: white;
+    box-sizing: border-box;
+    margin:0 ;
+    padding: 0;
+    outline: none;
 }
 body 
 {
@@ -16,85 +20,66 @@ a{
     margin-left: 1.875rem;
     margin-right: 1.875rem;
 }
+/*------------menu-----------*/
+ul{
+    list-style: none;
+}
 
-.menu
-{
+
+/*Basic style*/
+.navbar{
+    padding: 10px;
+    color: white;
+    height: 65px;
     
+
+}
+.navbar__links{
+    display: flex;
     font-size: 1.875rem;
     font-family: 'Cormorant Garamond', serif;
     line-height: 2.75rem ;
-    text-align: center;
+    
     display: flex;
     justify-content: space-around;
     list-style-type: none ;
     margin-top: 0.313rem;
     margin-bottom: 1.25rem;
-    
-
 }
-.childmenu
-{
+.navbar__link{
     display: inline;
+    padding: 0 10px;
 }
-.childmenu::after
-{
-    content: "";
-    display: block;
-    position:absolute;
-    height: 0.094rem;
-    width: 10.6%;
-    background-color: #cccccc;
-    transform: scale(0);
-    transition: transform 0.2s ease-in-out;
+.navbar__link>a{
+    padding: 0 10px;
+    color: white;
+    text-decoration: none;
 }
-.childmenu:hover::after
-{
-    transform: scale(1);
-}
-.childmenu1
-{
-    display: inline;
+.burger{
+    display:none
 }
 
-.childmenu1::after
-{
-    content: "";
-    display: block;
-    position:absolute;
-    height: 0.094rem;
-    width: 5%;
-    background-color: #cccccc;
-    transform: scale(0);
-    transition: transform 0.2s ease-in-out;
-}
-.childmenu1:hover::after
-{
-    transform: scale(1);
-    background-color: white;
+
+/*Navbar*/
+
+
+/*medium device*/
+@media screen and (min-width:768px) {
+    .navbar__link>a::after{
+        display: block;
+        content: "";
+        width: 0%;
+        height: 1px;
+        background: white;
+        transition: width .4s ;
+        
+    }
+    .navbar__link:hover>a::after{
+        width: 100%;
+    }
 }
 
-.childmenu2
-{
-    display: inline;
-}
-
-.childmenu2::after
-{
-    content: "";
-    display: block;
-    position:absolute;
-    height: 0.094rem;
-    width: 7%;
-    background-color: white;
-    transform: scale(0);
-    transition: transform 0.2s ease-in-out;
-}
-.childmenu2:hover::after
-{
-    transform: scale(1);
-    background-color: white;
-}
-
+/*----------accueil-----*/
 .accueil
 {
     margin-top: 9.375rem;
@@ -130,7 +115,7 @@ a{
     font-family: 'Cormorant-Garamond';
     font-size: 1.563rem;
     margin-bottom: 18.75rem;    
-    background-color: blueviolet;
+    background-color: rgba(232, 65, 65,0.75)
 
 }
 .aboutme
@@ -178,7 +163,7 @@ h2
     list-style-type: none;
 }
 
-.bar
+.fill
 {
     background: #353b48;
     display: block;
@@ -187,10 +172,10 @@ h2
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
-    transition: all cubic-bezier(.25,.8,.25, 1)
+    
 
 }
-.bar span
+.fill span
 {
     height: 1.25rem;
     float: left;
@@ -302,24 +287,160 @@ h2
 }
 
 /*--------------responsive----------------*/
-@media(max-width:1130px) {
-    *{
-        color: yellow;
+@media(max-width:1088px) {
+    .presentation
+    {
+        font-size: 1.5rem;
     }
-}
+    .pdp{
+        width: 15rem;
+        margin: auto;
+    }
+    .skill{
+        width: 40rem;
+    }
+}   
 
-@media(max-width:700px){
-    *{
-        color: red;
+/*small device*/
+
+@media screen and (max-width:767.98px){
+
+    .navbar__links{
+        display: flex;
+        flex-direction: column;
+        width: 0%;
+        height:calc(100vh - 65px);
+        position: fixed;
+        top: 65px;
+        right: 0;
+        transition: all 0.5s ease-in-out;
+        background:linear-gradient(135deg,rgba(10, 9, 10,1)0%, rgba(166, 0, 0,1)100%);
     }
+    .show-nav .navbar__links {
+        width:100%;
+        
+        
+    }
+    .navbar__link{
+        transform: translateX(101%)
+    }
+    .show-nav .navbar__link{
+        transform: translateX(0%);
+    }
+    .navbar__link>a{
+       display: block;
+       padding: 1rem;
+       font-size: 1.6rem;
+       transition: all .4s ease-in-out;
+
+    }
+    .navbar__link>a:hover{
+        padding-left: 2rem;
+        letter-spacing: 3px;
+
+    }
+/*toglle menu*/
+.burger{
+    display: block;
+    position: fixed;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
-@media(max-width:500px) {
-    *{
-        color:blue;
-    }
+.bar{
+    display: block;
+    width: 45px;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
     
 }
+.show-nav .bar{
+    width: 0;
+    background: transparent;
+}
+.bar::before, .bar::after{
+    content: "";
+    width: 45px;
+    height: 4px;
+    position: absolute;
+    left: 0; 
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+}
+.bar::before{
+    transform: translateY(-12px);
+}
+.bar::after{
+    transform: translateY(12px);
+}
+.show-nav .bar::before{
+    transform: rotate(45deg);
+}
+.show-nav .bar::after{
+    transform: rotate(-45deg);
+}
+.show-nav .first{
+    transition: all 1s ease-out;
+}
+.show-nav .second{
+    transition: all 1.1s ease-out;
+}
+.show-nav .third{
+    transition: all 1.2s ease-out;
+}
+.show-nav .fourth{
+    transition: all 1.3s ease-out;
+}
+/*-------about me*------*/
+.presentation{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.6rem;
+    overflow: hidden;
+    
 
+}
+.pdp{
+    width: 12rem;
+    margin: auto;
+}
+.aboutme{
+    margin: auto;
+}
+/*---------Skill-------*/
+.skill{
+    width: 20rem;
+    box-shadow: none;
+    border: none;
+    background-color: #141414;
+    
+}
+.softskill{
+    font-size:  0.75rem; 
+}
+
+.icone{
+    width: 50px;
+    height: 50px;
+}
+svg{
+    display: none;
+}
+/*-------Projet-------*/
+.projet{
+    min-width: 27.5rem;
+    max-width: 46.25rem;
+    height: 12.063rem;
+}
+}
 
 
 

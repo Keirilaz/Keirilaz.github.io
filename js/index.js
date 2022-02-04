@@ -1,11 +1,9 @@
+
 const sr = ScrollReveal({
     reset : true,
 });
-sr.reveal('.menu', {
-    duration:4000,
-    origin : 'left',
-    distance : '100px',
-});
+
+
 
 sr.reveal('.accueil', {
     duration:7000,
@@ -63,4 +61,15 @@ $(".image").click(function(){
     $(this).addClass("active");
     
 });
+
+function toggleMenu(){
+    const navbar = document.querySelector('.navbar');
+    const burger = document.querySelector('.burger');
+    burger.addEventListener('click',()=>{
+        navbar.classList.toggle('show-nav');
+    })
+};
+toggleMenu();
+
+
 

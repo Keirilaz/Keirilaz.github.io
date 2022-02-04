@@ -22,18 +22,21 @@
     <div class="blockpage">
 <!-- menu -->
         <header>
-            <nav class="navbar">
-                <ul class="menu">
-                    <li class="childmenu"><a href="#pre">Présentation</a></li>
-                    <li class="childmenu"><a href="#com">Compétence</a></li>
-                    <li class="childmenu1"><a href="#projet">Projet</a> </li>
-                    <li class="childmenu2" ><a href="#con">Contact</a></li>
+            <nav class="navbar" role="navigation">
+        
+        
+                <ul class="navbar__links">
+                    <li class="navbar__link first"><a href="#pre">Présentation</a></li>
+                    <li class="navbar__link second"><a href="#com">Compétence</a></li>
+                    <li class="navbar__link third"><a href="#projet">Projet</a> </li>
+                    <li class="navbar__link fourth"><a href="#con">Contact</a></li>
+                    
                 </ul>
                 <svg  width ="100%" height="4" style="background-color:#141414;">
                     <line x1 ="220" y1="2" x2="1320" y2="2" stroke="white" stroke-width=""></line>
-                </svg>
-    
-            </nav>
+                </svg> 
+                <button class="burger"><span class="bar"></span></button>
+                </nav>
         </header>
 
 <!-- acceuil -->
@@ -45,6 +48,9 @@
 
 <!-- about me  -->
         <div id="pre" class="presentation">
+            <div class="photo">
+                <img class='pdp' src="public/images/photo de profil.jpg" alt="photo de profil">
+            </div>
             <div class="aboutme">
                 <p> <span class='nom'>Vendome Kévin</span><br>
 
@@ -53,9 +59,7 @@
                 Actuellement en formation afin d’obtenir un titre professionnel développeur web et web mobile de niveau III (niveau bac +2)</p>
             </div>
 
-            <div class="photo">
-                <img class='pdp' src="public/images/photo de profil.jpg" alt="photo de profil">
-            </div>
+           
 
         </div>
 
@@ -95,7 +99,7 @@
                             <h3>Créatif</h3>
                         </div>
             
-                        <div class="autonome">
+                        <div class="icon">
                             <lord-icon
                                 src="https://cdn.lordicon.com/nxaaasqe.json"
                                 trigger="morph"
@@ -110,20 +114,20 @@
                             <div class="hardskill">
                                 <h2>Hardskill</h2>
                                     <li>
-                                        <img src="public/images/html.png" alt="html" width: 150;
-                                        height: 150;><span class="bar"><span class="html"></span></span>
+                                        <img class="icone" src="public/images/html.png" alt="html" width: 150;
+                                        height: 150;><span class="fill"><span class="html"></span></span>
                                     </li>
                                     <li>
-                                        <img src="public/images/css.png" alt="css">
-                                        <span class="bar"><span class="css"></span></span>
+                                        <img class="icone" src="public/images/css.png" alt="css">
+                                        <span class="fill"><span class="css"></span></span>
                                     </li>
                                     <li>
-                                        <img src="public/images/javascript.png" alt="javascript">
-                                        <span class="bar"><span class="javascript"></span></span>
+                                        <img class="icone" src="public/images/javascript.png" alt="javascript">
+                                        <span class="fill"><span class="javascript"></span></span>
                                     </li>
                                     <li>
-                                        <img src="public/images/react.png" alt="react">
-                                        <span class="bar"><span class="react"></span></span>
+                                        <img class="icone" src="public/images/react.png" alt="react">
+                                        <span class="fill"><span class="react"></span></span>
                                     </li>
                             </div>
                         </div>
