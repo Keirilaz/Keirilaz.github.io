@@ -453,9 +453,15 @@ svg{
 }
 /*-------Projet-------*/
 .projet{
-    min-width: 27.5rem;
-    max-width: 46.25rem;
-    height: 12.063rem;
+    min-width: 21.5rem;
+    max-width: 40.25rem;
+    height: 10.063rem;
+}
+.proj__links{
+    display: flex;
+    font-size: 0.875rem;
+    margin-top: 0.213rem;
+    margin-bottom: 0.75rem;
 }
 }
 
