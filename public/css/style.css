@@ -1,3 +1,4 @@
+/*Basic style*/
 *{
     color: white;
     box-sizing: border-box;
@@ -10,6 +11,7 @@ body
     background-color: #141414;
     color: white;
     text-shadow: 1px 1px 2px #401010;
+    z-index: 0;
 }
 a{
     text-decoration: none;
@@ -25,9 +27,7 @@ a{
 ul{
     list-style: none;
 }
-
-
-/*Basic style*/
+/*Navbar*/
 .navbar{
     padding: 10px;
     color: white;
@@ -37,7 +37,7 @@ ul{
 }
 .navbar__links{
     display: flex;
-    font-size: 1.875rem;
+    font-size: 2.2rem;
     font-family: 'Cormorant Garamond', serif;
     line-height: 2.75rem ;
     display: flex;
@@ -58,10 +58,6 @@ ul{
 .burger{
     display:none
 }
-
-
-/*Navbar*/
-
 
 /*medium device*/
 @media screen and (min-width:768px) {
@@ -323,12 +319,13 @@ h2
 @media screen and (max-width:767.98px){
 
     .navbar__links{
+        z-index: 1;
         display: flex;
         flex-direction: column;
         width: 0%;
         height:calc(100vh - 65px);
         position: fixed;
-        top: 65px;
+        /* top: 65px; */
         right: 0;
         transition: all 0.5s ease-in-out;
         background:linear-gradient(135deg,rgba(10, 9, 10,1)0%, rgba(166, 0, 0,1)100%);
@@ -366,6 +363,7 @@ h2
     border: none;
     background: transparent;
     cursor: pointer;
+    z-index: 1;
 }
 .bar{
     display: block;
@@ -378,7 +376,6 @@ h2
 }
 .show-nav .bar{
     width: 0;
-    background: transparent;
 }
 .bar::before, .bar::after{
     content: "";
