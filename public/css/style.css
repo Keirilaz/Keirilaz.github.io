@@ -19,6 +19,7 @@ a{
 {
     margin-left: 1.875rem;
     margin-right: 1.875rem;
+    font-family: 'Segoe UI', Tahoma,Verdana, sans-serif, serif;
 }
 /*------------menu-----------*/
 ul{
@@ -70,7 +71,7 @@ ul{
         width: 0%;
         height: 1px;
         background: white;
-        transition: width .4s ;
+        transition: 0.4s;
         
     }
     .navbar__link:hover>a::after{
@@ -90,7 +91,6 @@ ul{
 .welcome 
 {
     font-size: 3rem;
-    font-family: 'Cormorant Garamond', serif;
     line-height: 3.563rem;
     text-align: center;
     padding-bottom: 3.563rem;
@@ -100,7 +100,7 @@ ul{
 {
     
     font-size: 3.563rem;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif;
     text-align: center; 
    
     
@@ -111,7 +111,7 @@ ul{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-family: 'Cormorant-Garamond';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.563rem;
     margin-bottom: 18.75rem;    
     background-color: rgba(232, 65, 65,0.75)
